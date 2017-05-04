@@ -1,8 +1,8 @@
 {
   "name": "koa-architect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://gitlab.element-studio.ru:8008/npm/koa-architect",
-  "main": "index.js",
+  "main": "lib/architect.js",
   "engines": {
     "node": ">=7.6.0"
   },
