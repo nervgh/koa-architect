@@ -1,5 +1,7 @@
 # koa-architect
 
+[![build status](/npm/koa-architect/badges/master/build.svg)](/npm/koa-architect/commits/master)
+
 ## About
 Does architectural work for you.
 

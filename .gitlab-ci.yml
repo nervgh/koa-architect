@@ -6,5 +6,6 @@ testing:
     - npm install --silent
   script:
     - npm run test
+    - npm run test-cov
   tags:
     - docker
