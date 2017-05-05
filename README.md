@@ -49,26 +49,20 @@ exports.post = {
 ## Example
 Assume, we have next folder tree and code:
 
-![img](./screenshot.png)
+![example](./screenshot.png)
 
 ```
 middleware/
-middleware/01-foo/
 middleware/01-foo/index.js
-middleware/02-bar/
 middleware/02-bar/index.js
-middleware/route/
 middleware/route/index.js
-middleware/nested/
 middleware/nested/index.js
-middleware/nested/middleware/
-middleware/nested/middleware/index/
 middleware/nested/middleware/index/index.js
-middleware/nested/middleware/baz/
 middleware/nested/middleware/baz/index.js
 ```
 **middleware/01-foo/index.js**
 ```js
+// Middleware
 module.exports = function (ctx, next) {
   // Doing here some work and go next
   ctx.state.foo = 1
@@ -77,6 +71,7 @@ module.exports = function (ctx, next) {
 ```
 **middleware/02-bar/index.js**
 ```js
+// Middleware
 module.exports = function (ctx, next) {
   // Doing here some work and go next
   ctx.state.bar = 1
@@ -85,6 +80,7 @@ module.exports = function (ctx, next) {
 ```
 **middleware/route/index.js**
 ```js
+// Routes
 exports.get = {
   'index': function (ctx) {
     ctx.response.body = ctx.state
@@ -99,6 +95,8 @@ exports.post = {
 ```
 **middleware/nested/index.js**
 ```js
+// Nested middleware and/or routes
+
 const path = require('path')
 const architect = require('koa-architect')
 
@@ -109,12 +107,14 @@ exports.use = architect.readMiddlewareAndRoutes(path.join(__dirname, './middlewa
 ```
 **middleware/nested/middleware/index/index.js**
 ```js
+// Routes
 exports.use = function (ctx) {
   ctx.response.body = ctx.originalUrl
 }
 ```
 **middleware/nested/middleware/baz/index.js**
 ```js
+// Routes
 exports.get = {
   'index': function (ctx) {
     ctx.response.body = ctx.originalUrl
