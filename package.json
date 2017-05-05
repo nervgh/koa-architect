@@ -1,6 +1,6 @@
 {
   "name": "koa-architect",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "http://gitlab.element-studio.ru:8008/npm/koa-architect",
   "main": "lib/architect.js",
   "engines": {
@@ -9,5 +9,18 @@
   "dependencies": {
     "koa-mount": "~3.0.0",
     "koa-trie-router": "~2.1.4"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "koa": "^2.2.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --reporter dot"
   }
 }

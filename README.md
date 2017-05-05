@@ -112,9 +112,9 @@ GET --> /
 GET <-- 404 "Not Found"
 
 GET --> /route
-GET <-- 200 {foo:1,bar:1}
+GET <-- 200 {"foo":1,"bar":1}
 
-POST --> /route/1
+POST --> /route/test/1
 POST <-- 200 "1"
 
 GET --> /nested
@@ -123,3 +123,5 @@ GET <-- 200 "/nested"
 GET --> /nested/baz
 GET <-- 200 "/nested/baz"
 ```
+
+See [./test/fixtures](./test/fixtures) for details.
