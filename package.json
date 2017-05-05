@@ -1,8 +1,9 @@
 {
   "name": "koa-architect",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/nervgh/koa-architect",
   "main": "lib/architect.js",
+  "repository": "nervgh/koa-architect",
   "author": {
     "name": "Alexander Zaytsev",
     "email": "nervgh@gmail.com",

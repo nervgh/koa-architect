@@ -6,7 +6,7 @@
 
 
 ## About
-Reads a folder with middleware and routes and reduces routes to middleware using [koa-mount](https://github.com/koajs/mount) and [koa-trie-router](https://github.com/koajs/trie-router).  
+Reads a folder with middleware and routes and reduces them to middleware using [koa-mount](https://github.com/koajs/mount) and [koa-trie-router](https://github.com/koajs/trie-router).  
 That eventually allows you run your app extremely simple:
 
 ```js
