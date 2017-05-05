@@ -48,6 +48,9 @@ exports.post = {
 
 ## Example
 Assume, we have next folder tree and code:
+
+![img](./screenshot.png)
+
 ```
 middleware/
 middleware/01-foo/
