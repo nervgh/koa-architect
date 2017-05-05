@@ -1,6 +1,8 @@
 # koa-architect
 
-[![build status](http://gitlab.element-studio.ru:8008/npm/koa-architect/badges/master/build.svg)](http://gitlab.element-studio.ru:8008/npm/koa-architect/commits/master)
+[![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
+[![Test coverage][coveralls-image]][coveralls-url]
 
 ## About
 Reads a folder with middleware and routes and reduces routes to middleware using [koa-mount](https://github.com/koajs/mount) and [koa-trie-router](https://github.com/koajs/trie-router).  
@@ -165,3 +167,11 @@ GET <-- 200 "/nested/baz"
 ```
 
 See [test/fixtures](./test/fixtures) for details.
+
+
+[npm-image]: https://img.shields.io/npm/v/koa-architect.svg?style=flat
+[npm-url]: https://npmjs.org/package/koa-architect
+[travis-image]: https://img.shields.io/travis/nervgh/koa-architect.svg?style=flat
+[travis-url]: https://travis-ci.org/nervgh/koa-architect
+[coveralls-image]: https://img.shields.io/coveralls/nervgh/koa-architect.svg?style=flat
+[coveralls-url]: https://coveralls.io/r/nervgh/koa-architect?branch=master
