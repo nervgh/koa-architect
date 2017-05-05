@@ -1,0 +1,8 @@
+
+testing:
+  image: node:7
+  stage: test
+  script:
+    - npm run test
+  tags:
+    - docker
