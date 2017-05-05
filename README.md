@@ -1,6 +1,6 @@
 # koa-architect
 
-[![build status](/npm/koa-architect/badges/master/build.svg)](/npm/koa-architect/commits/master)
+[![build status](http://gitlab.element-studio.ru:8008/npm/koa-architect/badges/master/build.svg)](http://gitlab.element-studio.ru:8008/npm/koa-architect/commits/master)
 
 ## About
 Does architectural work for you.

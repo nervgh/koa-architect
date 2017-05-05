@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "test": "mocha",
-    "test-cov": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --reporter dot"
+    "test-cov": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --reporter dot",
+    "test-ci": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly"
   }
 }
