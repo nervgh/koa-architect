@@ -3,7 +3,45 @@
 [![build status](http://gitlab.element-studio.ru:8008/npm/koa-architect/badges/master/build.svg)](http://gitlab.element-studio.ru:8008/npm/koa-architect/commits/master)
 
 ## About
-Does architectural work for you.
+Reads a folder with middleware and routes and reduces routes to middleware using [koa-mount](https://github.com/koajs/mount) and [koa-trie-router](https://github.com/koajs/trie-router).  
+That eventually allows you run your app extremely simple:
+
+```js
+const Koa = require('koa')
+const architect = require('koa-architect')
+
+let app = new Koa()
+
+for(let middleware of architect.readMiddlewareAndRoutes('./middleware')) {
+  app.use(middleware)
+}
+```
+All of you need is keep in mind next things:
+1. each your file should returns a middleware or routes
+2. if it returns middleware then it will be pushed to the middleware stack
+3. if it returns routes then they will be reduced to middleware using a router
+
+### How does exactly your routes will be reduced to middleware?
+```js
+// router.use(fn)
+exports.use = function (ctx) {
+}
+
+// router.get('/', fn)
+exports.get = {
+  'index': function (ctx) {
+  }
+}
+
+// router.post('/foo', fn)
+// router.post('/bar/:id', fn)
+exports.post = {
+  'foo': function (ctx) {
+  },
+  'bar/:id': function (ctx) {
+  }
+}
+```
 
 ## Package managers
 ### NPM
@@ -23,7 +61,7 @@ Does architectural work for you.
     npm install
     ```
 
-## Usage
+## Example
 Assume, we have next folder tree and code:
 ```
 middleware/
@@ -126,4 +164,4 @@ GET --> /nested/baz
 GET <-- 200 "/nested/baz"
 ```
 
-See [./test/fixtures](./test/fixtures) for details.
+See [test/fixtures](./test/fixtures) for details.
