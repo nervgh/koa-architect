@@ -4,6 +4,7 @@
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 
+
 ## About
 Reads a folder with middleware and routes and reduces routes to middleware using [koa-mount](https://github.com/koajs/mount) and [koa-trie-router](https://github.com/koajs/trie-router).  
 That eventually allows you run your app extremely simple:
@@ -44,24 +45,6 @@ exports.post = {
   }
 }
 ```
-
-## Package managers
-### NPM
-1. Describe your **package.json** file:
-
-    ```json
-    {
-      "name": "your-app-name",
-      "dependencies": {
-        "koa-architect": "git+ssh://git@gitlab.element-studio.ru:npm/koa-architect.git#latest"
-      }
-    }
-    ```
-    
-2. Execute in terminal:
-    ```bash
-    npm install
-    ```
 
 ## Example
 Assume, we have next folder tree and code:
@@ -167,6 +150,14 @@ GET <-- 200 "/nested/baz"
 ```
 
 See [test/fixtures](./test/fixtures) for details.
+
+
+## Package managers
+### NPM
+```
+npm install koa-architect
+```
+You could find this module in npm like [_koa-architect_](https://www.npmjs.com/search?q=koa-architect).
 
 
 [npm-image]: https://img.shields.io/npm/v/koa-architect.svg?style=flat
