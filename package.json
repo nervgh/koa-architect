@@ -1,7 +1,8 @@
 {
   "name": "koa-architect",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "homepage": "https://github.com/nervgh/koa-architect",
+  "description": "Automates mounting and routing",
   "main": "lib/architect.js",
   "repository": "nervgh/koa-architect",
   "author": {
@@ -22,6 +23,18 @@
     "mocha": "^3.2.0",
     "supertest": "^3.0.0"
   },
+  "keywords": [
+    "architect",
+    "architector",
+    "mount",
+    "mounting",
+    "route",
+    "routing",
+    "router",
+    "automate",
+    "automation",
+    "middleware"
+  ],
   "files": [
     "lib"
   ],
