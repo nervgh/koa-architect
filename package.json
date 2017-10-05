@@ -1,6 +1,6 @@
 {
   "name": "koa-architect",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "homepage": "https://github.com/nervgh/koa-architect",
   "description": "Automates mounting and routing",
   "main": "lib/architect.js",
@@ -14,8 +14,8 @@
     "node": ">=7"
   },
   "dependencies": {
-    "koa-mount": "~3.0.0",
-    "koa-trie-router": "~2.1.4"
+    "koa-mount": "^3.0.0",
+    "koa-trie-router": "^2.1.4"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
